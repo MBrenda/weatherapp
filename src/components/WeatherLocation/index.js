@@ -58,3 +58,6 @@ class WeatherLocation extends Component {
     };
 };  
     export default WeatherLocation;
+
+    //CON EL CONSTRUCTOR SE PONE EL ESTADO INICIAL STATE, SE RENDERIZA CON ESE ESTADO
+    //SE EJECUTA EL CLICK TOMA EL SETSTATE Y SE RENDERIZA DE NUEVO CON LOS NUEVOS DATOS
