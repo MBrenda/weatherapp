@@ -2,22 +2,26 @@ import React, { Component } from 'react';
 import Location from './Location';
 import WeatherData from './WeatherData';
 import WeatherTemperature from './WeatherData/WeatherTemperature';
-import { SUN, CLOUD } from '../../constants/weathers';
+import { SUN } from '../../constants/weathers';
 import './styles.css';
+
+const location = "Mendoza,AR";
+const api_key = "634224dde74567613b4a97da6d758014";
+const api_weather = `api.openweathermap.org/data/2.5/weather?q=${location}&APPID=${api_key}`;
 
 const data1= {
     temperature: 20,
     weatherState: SUN,
-    humidity: 10,
+    humidity: 20,
     wind: '10 m/s',
 };
 
-const data2= {
+/* const data2= {
     temperature: 10,
     weatherState: CLOUD,
     humidity: 0,
     wind: '20 m/s',
-};
+}; */
 
 //functional component
 /* const WeatherLocation = () => (
@@ -40,10 +44,12 @@ class WeatherLocation extends Component {
     }
     
     handleUpdateClick = () => {
-        this.setState ({
+        //recibe la url de donde busco la info
+        fetch(api_weather);
+        /* this.setState ({
             city: 'Mendoza',
             data: data2
-        });
+        }); */
         console.log("actualizado");
     }
 
